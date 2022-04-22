@@ -5,16 +5,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.phani.spring.limitsservice.Configuration;
-import com.phani.spring.limitsservice.bean.LimitsConfiguration;
+import com.phani.spring.limitsservice.bean.Limits;
 
 @RestController
-public class LimitServiceController {
-	
+public class LimitsController {
+
 	@Autowired
 	private Configuration configuration;
-	
+
 	@GetMapping("/limits")
-	public LimitsConfiguration getLimits() {
-		return new LimitsConfiguration(configuration.getMinimum(),configuration.getMaximum());
+	public Limits getLimits() {
+		return new Limits(configuration.getMinimum(), configuration.getMaximum());
 	}
 }

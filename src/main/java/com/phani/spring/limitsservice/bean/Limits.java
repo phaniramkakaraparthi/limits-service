@@ -1,13 +1,14 @@
 package com.phani.spring.limitsservice.bean;
 
-public class LimitsConfiguration {
-	
+public class Limits {
+
 	private int min;
 	private int max;
-	
-	protected LimitsConfiguration(){}
-	
-	public LimitsConfiguration(int min, int max) {
+
+	protected Limits() {
+	}
+
+	public Limits(int min, int max) {
 		super();
 		this.min = min;
 		this.max = max;
